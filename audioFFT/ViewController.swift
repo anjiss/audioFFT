@@ -32,7 +32,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
             try audioSession.setCategory(AVAudioSessionCategoryRecord)
             try audioRecorder = AVAudioRecorder(URL:self.directoryURL()!, settings: recordSettings)
         } catch {}
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "update", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {
